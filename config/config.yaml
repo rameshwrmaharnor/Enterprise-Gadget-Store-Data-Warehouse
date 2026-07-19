@@ -1,0 +1,44 @@
+# ==========================================================
+# Enterprise Gadget Store Data Warehouse
+# Configuration File
+# ==========================================================
+
+project:
+  name: Enterprise Gadget Store Data Warehouse
+  company: TechNova Electronics Pvt. Ltd.
+  version: 1.0.0
+
+database:
+  host: host.docker.internal
+  port: 3306
+  username: root
+  password: rootpassword
+  database: enterprise_gadget_store
+
+paths:
+  raw: data/raw
+  bronze: data/bronze
+  silver: data/silver
+  gold: data/gold
+  logs: logs
+
+dataset:
+  categories: 120
+  suppliers: 8000
+  products: 80000
+  customers: 250000
+  coupons: 50000
+  orders: 2000000
+  payments: 2000000
+  shipments: 2000000
+  inventory: 500000
+
+random_seed: 42
+
+logging:
+  level: INFO
+  file: logs/project.log
+
+output:
+  encoding: utf-8
+  index: false

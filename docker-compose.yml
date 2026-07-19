@@ -1,0 +1,11 @@
+services:
+  etl:
+    image: enterprise-etl:v3
+    container_name: enterprise-etl
+
+    volumes:
+      - .:/app
+
+    working_dir: /app
+
+    tty: true

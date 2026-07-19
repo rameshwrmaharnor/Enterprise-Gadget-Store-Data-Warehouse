@@ -1,0 +1,16 @@
+database:
+  host: localhost
+  port: 3306
+  username: root
+  password: rootpassword
+  database: enterprise_gadget_store
+
+mysql:
+  charset: utf8mb4
+  autocommit: true
+
+bronze:
+  batch_size: 10000
+
+logging:
+  level: INFO
