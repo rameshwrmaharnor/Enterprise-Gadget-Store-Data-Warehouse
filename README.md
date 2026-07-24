@@ -243,9 +243,6 @@ The Bronze Layer stores raw data exactly as received.
 - Preserve original source data.
 - Maintain historical records.
 - Perform no transformations.
-
----
-
 ## 🥈 Step 3 - Silver Layer
 
 The Silver Layer cleans and standardizes the data.
@@ -257,9 +254,6 @@ The Silver Layer cleans and standardizes the data.
 - Standardize formats
 - Validate records
 - Improve data quality
-
----
-
 ## 🥇 Step 4 - Gold Layer
 
 The Gold Layer creates business-ready datasets.
@@ -271,9 +265,6 @@ The Gold Layer creates business-ready datasets.
 - Surrogate Keys
 - Business Metrics
 - Star Schema
-
----
-
 ## 📊 Step 5 - Analytics Data Marts
 
 Business-focused marts are created for reporting and analytics.
@@ -311,9 +302,6 @@ Update Metadata
        ▼
 Pipeline Completed
 ```
-
----
-
 # 🌬️ Apache Airflow Orchestration
 
 Apache Airflow is used to automate and schedule ETL workflows.
@@ -329,9 +317,6 @@ Apache Airflow is used to automate and schedule ETL workflows.
 - Failure Handling
 
 The Airflow DAG orchestrates the execution of ETL pipelines in the correct order while maintaining data consistency.
-
----
-
 # 🐳 Docker Integration
 
 Docker is used to create a consistent execution environment.
@@ -343,17 +328,10 @@ Docker is used to create a consistent execution environment.
 - Dependency Isolation
 - Simplified Setup
 - Reproducible Builds
-
 Docker containers are used to run Apache Airflow and supporting services.
-
----
-
 ## 📈 Step 6 - Power BI
 
 Power BI connects directly to the Analytics Data Marts to create interactive dashboards, KPI cards, charts, and business reports for decision-making.
-
-
----
 
 # ⭐ Data Warehouse Design (Star Schema)
 
@@ -367,9 +345,6 @@ The Enterprise Gadget Store Data Warehouse follows a **Star Schema** design to o
 | `fact_payments` | Stores payment transactions |
 | `fact_inventory` | Stores inventory movement and stock details |
 | `fact_shipments` | Stores shipment and delivery information |
-
----
-
 ## 📌 Dimension Tables
 
 | Dimension Table | Description |
@@ -380,9 +355,6 @@ The Enterprise Gadget Store Data Warehouse follows a **Star Schema** design to o
 | `dim_category` | Product categories |
 | `dim_coupon` | Coupon details |
 | `dim_date` | Date dimension for time-based analysis |
-
----
-
 ## 📌 Analytics Data Marts
 
 Business-ready Data Marts created for reporting:
@@ -394,9 +366,6 @@ Business-ready Data Marts created for reporting:
 | `inventory_mart` | Inventory tracking |
 | `payment_mart` | Payment analysis |
 | `supplier_mart` | Supplier performance |
-
----
-
 ## ✅ Benefits of Star Schema
 
 - Faster analytical queries
@@ -404,9 +373,6 @@ Business-ready Data Marts created for reporting:
 - Simplified reporting
 - Optimized joins
 - Scalable data warehouse design
-
----
-
 # 📊 Power BI Dashboard
 
 An interactive Executive Dashboard was developed using **Power BI** to provide business insights.
@@ -420,9 +386,6 @@ An interactive Executive Dashboard was developed using **Power BI** to provide b
 - 💳 Payment Analysis
 - 🚚 Shipment Analysis
 - 🏷️ Product & Category Analysis
-
----
-
 ## 📈 Dashboard KPIs
 
 The dashboard includes the following Key Performance Indicators (KPIs):
@@ -439,33 +402,25 @@ The dashboard includes the following Key Performance Indicators (KPIs):
 - 💳 Payment Method Distribution
 - 📦 Inventory Availability
 - 🌍 Sales by Region
-
----
-
 # 📷 Dashboard Preview
 
 > **Replace the images below with your actual dashboard screenshots.**
 
 ## Executive Dashboard
 
-```text
-images/executive_dashboard.png
-```
+
+<img width="1917" height="976" alt="image" src="https://github.com/user-attachments/assets/4f4880aa-aae5-435a-995b-c8d6e731c452" />
 
 ## Sales Dashboard
 
 ```text
 images/sales_dashboard.png
 ```
-
 ## Customer Dashboard
 
 ```text
 images/customer_dashboard.png
 ```
-
----
-
 # ✨ Project Features
 
 ## Data Engineering
@@ -477,9 +432,7 @@ images/customer_dashboard.png
 - Data Validation
 - Incremental Loading
 - Logging & Monitoring
-
----
-
+- 
 ## Data Warehouse
 
 - Star Schema
@@ -487,9 +440,6 @@ images/customer_dashboard.png
 - Analytics Data Marts
 - Business-Ready Data Model
 - Optimized SQL Queries
-
----
-
 ## Python Development
 
 - Modular ETL Scripts
@@ -498,8 +448,6 @@ images/customer_dashboard.png
 - Error Handling
 - Reusable Code Structure
 
----
-
 ## Business Intelligence
 
 - Interactive Power BI Dashboard
@@ -507,8 +455,6 @@ images/customer_dashboard.png
 - Charts & Visualizations
 - Drill-down Analysis
 - Business Insights
-
----
 
 # 📈 Business Insights
 
@@ -522,8 +468,6 @@ This project enables organizations to answer business questions such as:
 - Which categories perform the best?
 - How does shipment performance impact customer satisfaction?
 - What is the inventory status across products?
-
----
 
 # 📌 Project Workflow
 
@@ -553,8 +497,6 @@ Power BI Dashboard
         │
         ▼
 Business Insights
-```
----
 
 # ⚙️ Installation Guide
 
@@ -569,25 +511,17 @@ Before running this project, ensure the following software is installed:
 - Docker Desktop (Optional)
 - Visual Studio Code
 
----
-
 ## 📥 Clone the Repository
 
 ```bash
 git clone https://github.com/rameshwrmaharnor/Enterprise-Gadget-Store-Data-Warehouse.git
 
 cd Enterprise-Gadget-Store-Data-Warehouse
-```
-
----
 
 ## 📦 Install Dependencies
 
 ```bash
 pip install -r requirements.txt
-```
-
----
 
 ## ⚙️ Configure Database
 
@@ -605,8 +539,6 @@ Provide the following details:
 - Password
 - Database Name
 
----
-
 ## 📂 Download Dataset
 
 The dataset is available separately due to its large size.
@@ -620,10 +552,7 @@ The dataset is available separately due to its large size.
 ```
 data/raw/
 ```
-
 4. Start the ETL pipeline.
-
----
 
 # 🚀 Project Execution
 
@@ -636,33 +565,26 @@ python -m scripts.generators.generate_customers
 python -m scripts.generators.generate_products
 python -m scripts.generators.generate_orders
 ```
-
 ### Load Bronze Layer
 
 ```bash
 python -m scripts.ingestion.load_bronze
 ```
-
 ### Transform Silver Layer
-
 ```bash
 python -m scripts.transformations.transform_customers
 python -m scripts.transformations.transform_orders
 ```
-
 ### Load Gold Layer
 
 ```bash
 python -m scripts.warehouse.run_gold_pipeline
 ```
-
 ### Create Analytics Data Marts
 
 ```bash
 python -m scripts.marts.run_marts_pipeline
-```
 
----
 
 # 🐳 Docker Support
 
@@ -683,7 +605,17 @@ Stop the containers:
 ```bash
 docker compose down
 ```
+## Run Apache Airflow
 
+```bash
+docker-compose up
+```
+
+Open Airflow UI:
+
+```text
+http://localhost:8080
+```
 ---
 
 # 🧪 Testing
@@ -713,34 +645,43 @@ python -m pytest tests/
 
 ---
 
-# 🔮 Future Enhancements
+# 📌 Future Enhancements
 
-The following improvements can be added in future versions:
+The project can be extended with the following improvements:
 
-- Apache Airflow for workflow orchestration
-- Apache Spark for distributed data processing
-- Kafka for real-time data streaming
+- PostgreSQL Support
+- Microsoft SQL Server Support
 - Snowflake Data Warehouse
-- Azure Data Factory Integration
-- AWS Cloud Deployment
-- CI/CD Pipeline Enhancement
-- Real-time Dashboard Updates
-- Machine Learning based Sales Forecasting
-- Automated Data Quality Monitoring
+- AWS S3 Data Lake
+- Azure Data Factory
+- Databricks Integration
+- Apache Spark Processing
+- Kafka Streaming Pipelines
+- CI/CD using GitHub Actions
+- Data Quality Framework
+- Unit Testing
+- Monitoring & Alerting
+- Cloud Deployment
+- Machine Learning Integration
+- Predictive Analytics
 
----
+# 📚 Learning Outcomes
 
-# 🤝 Contributing
+This project demonstrates practical experience with:
 
-Contributions, suggestions, and improvements are welcome.
-
-If you would like to contribute:
-
-1. Fork the repository.
-2. Create a feature branch.
-3. Commit your changes.
-4. Push the branch.
-5. Open a Pull Request.
+- Data Engineering
+- ETL Development
+- Data Warehousing
+- Dimensional Modeling
+- Incremental ETL
+- Python Programming
+- SQL Development
+- Apache Airflow
+- Docker
+- Power BI
+- Business Intelligence
+- Data Validation
+- Enterprise Project Design
 
 ---
 
@@ -761,30 +702,16 @@ If you would like to contribute:
 - Data Warehousing
 
 ### GitHub
-
 https://github.com/rameshwrmaharnor
 
----
-
-# 📄 License
-
-This project is licensed under the **MIT License**.
-
-See the `LICENSE` file for more information.
-
----
-
 # 🙏 Acknowledgements
-
-Special thanks to:
-
-- Open Source Community
-- Python Community
+Special thanks to the open-source community and the creators of:
+- Python
+- Pandas
+- SQLAlchemy
 - MySQL
-- Power BI
+- Apache Airflow
 - Docker
+- Microsoft Power BI
 - GitHub
-
----
-
 ⭐ **If you found this project useful, consider giving it a Star on GitHub!**
