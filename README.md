@@ -285,6 +285,68 @@ Business-focused marts are created for reporting and analytics.
 - Supplier Mart
 
 ---
+# 📋 Incremental ETL Flow
+
+```text
+Last Watermark
+       │
+       ▼
+Read New Records
+       │
+       ▼
+Remove Existing Records
+       │
+       ▼
+Validate Records
+       │
+       ▼
+Transform Data
+       │
+       ▼
+Load Fact Table
+       │
+       ▼
+Update Metadata
+       │
+       ▼
+Pipeline Completed
+```
+
+---
+
+# 🌬️ Apache Airflow Orchestration
+
+Apache Airflow is used to automate and schedule ETL workflows.
+
+### Features
+
+- DAG-Based Workflow
+- Scheduled ETL Execution
+- Task Dependencies
+- Retry Mechanism
+- Execution Monitoring
+- Logging
+- Failure Handling
+
+The Airflow DAG orchestrates the execution of ETL pipelines in the correct order while maintaining data consistency.
+
+---
+
+# 🐳 Docker Integration
+
+Docker is used to create a consistent execution environment.
+
+### Benefits
+
+- Environment Consistency
+- Easy Deployment
+- Dependency Isolation
+- Simplified Setup
+- Reproducible Builds
+
+Docker containers are used to run Apache Airflow and supporting services.
+
+---
 
 ## 📈 Step 6 - Power BI
 
